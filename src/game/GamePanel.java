@@ -11,6 +11,9 @@ import java.awt.event.KeyListener;
 import javax.swing.JPanel;
 
 public class GamePanel extends JPanel implements KeyListener {
+	public static int keyCode;
+	public Game game = new Game();
+	
 	public GamePanel() {
 		setPreferredSize(new Dimension(700,700));
 		addKeyListener(this);
@@ -21,6 +24,8 @@ public class GamePanel extends JPanel implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent arg0) {
 		// TODO Auto-generated method stub
+		keyCode = arg0.getKeyCode();
+		
 		
 	}
 	@Override
@@ -32,5 +37,10 @@ public class GamePanel extends JPanel implements KeyListener {
 	public void keyTyped(KeyEvent arg0) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	
+	public static int getKeyCode() {
+		return keyCode;
 	}
 }
