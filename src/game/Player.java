@@ -6,16 +6,13 @@
 package game;
 
 import javax.swing.ImageIcon;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 public class Player {
 	private String name;
 	private ImageIcon icon;
 	private int score;
-	private int xPos;
-	private int yPos;
+	private int xPos = 0;
+	private int yPos = 0;
 	private Movement mover;
 	
 	// constructors
@@ -29,20 +26,12 @@ public class Player {
 		
 	}
 	// 
+		
+/*	public void move() {
+		xPos = mover.getNewXPos(xPos);
+		yPos = mover.getNewYPos(yPos);
+	} */
 	
-	public void readFromFile(File file) throws FileNotFoundException {
-		Scanner fileScanner = new Scanner(file);
-		fileScanner.useDelimiter(",");
-		String name;
-		ImageIcon icon;
-		while(fileScanner.hasNext()) {
-			name = fileScanner.next();
-			icon = new ImageIcon(fileScanner.next());
-			this.setName(name);
-			this.setIcon(icon);
-		}
-		fileScanner.close();
-	}
 	// getters + setters
 	public void setName(String name) {
 		this.name = name;
@@ -76,5 +65,10 @@ public class Player {
 	}
 	public int getYPos() {
 		return yPos;
+	}
+
+	// toString
+	public String toString() {
+		return "Name: " + name + "\nScore: " + score;
 	}
 }

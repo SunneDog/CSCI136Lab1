@@ -16,6 +16,9 @@ public class Wall {
 		this.yPos = yPos;
 		this.icon = icon;
 	}
+	public Wall() {
+		
+	}
 	// getters + setters
 	public void setXPos(int xPos) {
 		this.xPos = xPos;
