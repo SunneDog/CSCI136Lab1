@@ -1,0 +1,2 @@
+Dragonite,./src/resources/icons/Player1.png,
+Salazzle,./src/resources/icons/Player2.png
