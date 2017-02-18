@@ -10,7 +10,7 @@ public class Driver {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
-		JFrame gameFrame = new JFrame("My Cool Game");
+		JFrame gameFrame = new JFrame("Cool Game");
 		GamePanel gamePanel = new GamePanel();
 		
 		gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
