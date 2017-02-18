@@ -10,10 +10,9 @@ import javax.swing.ImageIcon;
 public class Player {
 	private String name;
 	private ImageIcon icon;
-	private int score;
+	private int score = 0;
 	private int xPos = 0;
 	private int yPos = 0;
-	private Movement mover;
 	
 	// constructors
 	public Player(String name, ImageIcon icon, int xPos, int yPos) {
@@ -27,10 +26,10 @@ public class Player {
 	}
 	// 
 		
-/*	public void move() {
-		xPos = mover.getNewXPos(xPos);
-		yPos = mover.getNewYPos(yPos);
-	} */
+	public void scorePoint() {
+		this.score = score + 1;
+		System.out.println(score);
+	}
 	
 	// getters + setters
 	public void setName(String name) {
